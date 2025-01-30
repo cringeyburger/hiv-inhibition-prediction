@@ -20,11 +20,8 @@ def refactor_columns(data_path, save_path):
         "***Updated the HIV_active column based on activity and removed the activity column***"
     )
 
+# NOTE: Deprecating this for the other implementation
 
-# https://github.com/deepchem/deepchem/blob/master/deepchem/splits/splitters.py
-# https://github.com/rdkit/rdkit/blob/master/rdkit/Chem/Scaffolds/MurckoScaffold.py
-
-# Deprecating this for the other implementation
 # def scaffold_split_and_save(dataset_path, train_path, test_path, train_frac=0.8):
 #     """
 #     Perform Bemis-Murcko scaffold-based splitting and save the splits to disk
@@ -60,6 +57,9 @@ def refactor_columns(data_path, save_path):
 #         "***Split the dataset into train and test based on Bemis-Murcko Scaffolding***"
 #     )
 
+
+# https://github.com/deepchem/deepchem/blob/master/deepchem/splits/splitters.py
+# https://github.com/rdkit/rdkit/blob/master/rdkit/Chem/Scaffolds/MurckoScaffold.py
 
 def _generate_scaffold(smiles: str) -> Optional[str]:
     """Generates a Bemis-Murcko scaffold from a SMILES string."""
